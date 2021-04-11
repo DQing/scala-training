@@ -26,15 +26,11 @@ sealed trait FormValidator {
     username: String,
     password: String,
     age: Int): Either[DomainValidation, RegistrationData] =
-    validateUserName(username)
-      .flatMap(validatedUserName =>
-        validatePassword(password)
-          .flatMap(validatedPassword =>
-            validateAge(age)
-              .map(validatedAge => RegistrationData(validatedUserName, validatedPassword, validatedAge))
-          )
-      )
-
+    for {
+      validatedUserName <-  validateUserName(username)
+      validatedPassword <- validatePassword(password)
+      validatedAge <- validateAge(age)
+    } yield RegistrationData(validatedUserName, validatedPassword, validatedAge)
 }
 
 object FormValidator extends FormValidator
