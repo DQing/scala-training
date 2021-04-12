@@ -1,4 +1,4 @@
-package validation2
+package validated
 
 sealed trait DomainValidation {
   def errorMessage: String

@@ -1,4 +1,4 @@
-package validation3
+package validatedNec
 
 import cats.data.{NonEmptyChain, Validated, ValidatedNec}
 import cats.syntax.all._

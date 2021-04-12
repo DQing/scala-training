@@ -1,9 +1,9 @@
-package validation2
+package validated
 
-import cats.data.Validated
+import cats.data.{NonEmptyList, Validated}
 
 object Main extends App {
-  private val value: Validated[List[DomainValidation], RegistrationData] = FormValidator.validateForm(
+  private val value: Validated[NonEmptyList[DomainValidation], RegistrationData] = FormValidator.validateForm(
     username = "fakeUs3rname",
     password = "password",
     age = 15,

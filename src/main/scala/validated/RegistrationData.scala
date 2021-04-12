@@ -1,4 +1,4 @@
-package validation2
+package validated
 
 case class RegistrationData(
   userName: String,

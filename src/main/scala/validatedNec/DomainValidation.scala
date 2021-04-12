@@ -1,4 +1,4 @@
-package validation1
+package validatedNec
 
 sealed trait DomainValidation {
   def errorMessage: String

@@ -1,4 +1,4 @@
-package validation1
+package validatedNec
 
 case class RegistrationData(
   userName: String,

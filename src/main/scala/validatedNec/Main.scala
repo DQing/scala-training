@@ -1,4 +1,4 @@
-package validation3
+package validatedNec
 
 object Main extends App {
   private val result1 = FormValidatorNec.validateForm(

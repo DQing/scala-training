@@ -1,4 +1,4 @@
-package validation1
+package either
 
 sealed trait FormValidator {
   def validateUserName(userName: String): Either[DomainValidation, String] =

@@ -1,4 +1,4 @@
-package validation1
+package either
 
 object Main extends App {
   private val value: Either[DomainValidation, RegistrationData] = FormValidator.validateForm(
