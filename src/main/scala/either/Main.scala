@@ -6,5 +6,7 @@ object Main extends App {
     password = "password",
     age = 15,
   )
-  println(value)
+  value.left.map(
+    e => println(e.errorMessage)
+  )
 }
